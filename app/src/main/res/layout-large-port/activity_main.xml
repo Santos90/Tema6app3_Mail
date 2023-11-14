@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <androidx.fragment.app.FragmentContainerView
-        class="com.example.tema6app3.fragments.ListFragment"
+        class="com.example.tema6app3mail.fragments.ListFragment"
         android:id="@+id/frgListado"
         android:layout_weight="40"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         tools:layout="@layout/fragment_list" />
 
     <androidx.fragment.app.FragmentContainerView
-        class="com.example.tema6app3.fragments.DetailFragment"
+        class="com.example.tema6app3.fragmentsmail.DetailFragment"
         android:id="@+id/frgDetalle"
         android:layout_weight="60"
         android:layout_width="match_parent"
