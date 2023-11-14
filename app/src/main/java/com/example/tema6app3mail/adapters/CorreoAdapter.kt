@@ -10,7 +10,7 @@ import com.example.tema6app3mail.databinding.ListItemCorreoBinding
 import com.example.tema6app3mail.pojos.Correo
 
 
-class CorreoAdapter (private val correos: List<Correo>, private val listener: CorreosListener): RecyclerView.Adapter<CorreoAdapter.ViewHolder>(){
+class CorreoAdapter (private val correos: List<Correo>, private val listener: OnClickListener): RecyclerView.Adapter<CorreoAdapter.ViewHolder>(){
 
     private lateinit var context: Context
 

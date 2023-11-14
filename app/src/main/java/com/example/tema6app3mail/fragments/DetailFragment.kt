@@ -20,7 +20,7 @@ class DetailFragment : Fragment() {
     }
 
     // Creamos un método público que nos ayude a asignar el contenido del correo
-    fun mostrarDetalle(texto: String) {
+    fun mostrarDetalle(texto: String?) {
         binding.tvDetalle.text = texto
     }
 }
