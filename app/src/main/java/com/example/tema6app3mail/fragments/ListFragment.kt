@@ -20,9 +20,8 @@ class ListFragment : Fragment() , OnClickListener {
 
     private lateinit var binding: FragmentListBinding
 
-    private lateinit var listenerOnClick: OnClickListener
 
-    private lateinit var listenerCorreo: CorreosListener
+    private lateinit var listenerCorreo: OnClickListener
 
     override fun onCreateView(
 
@@ -47,15 +46,15 @@ class ListFragment : Fragment() , OnClickListener {
 
 
 
-    fun setCorreosListener(listener: CorreosListener) {
-        this.listenerCorreo = listener
+    fun setFragmentListener(listenerCorreo: OnClickListener) {
+        this.listenerCorreo = listenerCorreo
 
     }
 
     override fun onClick(correo: Correo) {
         Toast.makeText(context, "Seleccion: ${correo.getDe()}", Toast.LENGTH_LONG)
 
-        if (listenerCorreo != null) listenerCorreo.onCorreoSeleccionado(correo)
+        if (listenerCorreo != null) listenerCorreo.onClick(correo)
     }
 
 }
