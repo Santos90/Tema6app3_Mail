@@ -19,12 +19,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val frgListado =
-            supportFragmentManager.findFragmentById(binding.frgListado.id) as ListFragment
+        val frgListado = supportFragmentManager.findFragmentById(binding.frgListado.id) as ListFragment
 
         frgListado.setFragmentListener(this)
     }
-
 
     override fun onClick(correo : Correo) {
 
@@ -32,17 +30,21 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             supportFragmentManager.findFragmentById(it.id)
         } != null
 
-        var hayDetalle2 = supportFragmentManager.findFragmentById(R.id.frgDetalle) != null
-
-
+        //var hayDetalle2 = supportFragmentManager.findFragmentById(R.id.frgDetalle) != null
 
         if (hayDetalle){//Si existe frgDetalle, se muestra el contenido en la misma Activity
 
+/*
             val detailFragment = DetailFragment()
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction
+            supportFragmentManager.beginTransaction()
                 .replace(R.id.frgDetalle, detailFragment)
                 .commitNow()
+
+*/
+
+            val detailFragment = supportFragmentManager.findFragmentById(R.id.frgDetalle) as DetailFragment
+
+
             detailFragment.mostrarDetalle(correo.getTexto())
 
         }else {
