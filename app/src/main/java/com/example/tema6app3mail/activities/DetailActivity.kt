@@ -12,17 +12,13 @@ class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
-
         detailFragment = supportFragmentManager.findFragmentById(R.id.frgDetalle) as DetailFragment
-
     }
 
     override fun onResume() {
         super.onResume()
 
         detailFragment.mostrarDetalle(  intent.getStringExtra("TextoDetalle")  )
-
-
     }
 
     override fun onStart() {

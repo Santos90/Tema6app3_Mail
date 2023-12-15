@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_all"
+        android:title="Todos"
+        android:icon="@drawable/filter_all" />
+
+    <item
+        android:id="@+id/filter_1"
+        android:title="Sin Spam"
+        android:icon="@drawable/filter_1" />
+
+    <item
+        android:id="@+id/filter_2"
+        android:title="Spam"
+        android:icon="@drawable/filter_2" />
+
+</menu>
